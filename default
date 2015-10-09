@@ -1,0 +1,21 @@
+erver {
+    listen 8080;
+    root /usr/share/nginx/www;
+    index index.php;
+    # Make site accessible from http://localhost/
+    server_name localhost;
+    location / {
+	    # First attempt to serve request as file, then
+	    # as directory, then fall back to displaying a 404.
+        try_files $uri $uri/ /index.php;
+	}
+
+    location ~ \.php$ {
+      try_files $uri =404;
+      fastcgi_split_path_info ^(.+\.php)(/.+)$;
+      fastcgi_pass unix:/var/run/php5-fpm.sock;
+      fastcgi_index index.php;
+      include fastcgi_params;
+    }
+
+}
