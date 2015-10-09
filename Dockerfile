@@ -1,7 +1,7 @@
 FROM huttopia/nginx-php-fpm
 
 #Allows us to run lsof, the update repositories seem to be outof date.
-# lsof -i :8080 should show nginx runs
+# lsof -i :8080 should show nginx runs. 
 RUN apt-get update
 RUN apt-get install -y lsof
 RUN apt-get install -y vim
