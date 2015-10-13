@@ -1,4 +1,4 @@
 <?php
   error_log('Reached here');
-  echo 'Hello, World! - Chiquita Kerur';
+  echo 'Hello, World! K8s integration- Chiquita Kerur';
 ?>
