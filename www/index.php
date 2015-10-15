@@ -1,4 +1,4 @@
 <?php
   error_log('Reached here');
-  echo 'Hello from my Kubernetes integration demo';
+echo 'Demo Demo ! Hello from my Kubernetes integration demo';
 ?>
